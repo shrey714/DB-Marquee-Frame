@@ -21,22 +21,22 @@ import { Marquee } from "@/components/magicui/marquee";
 
 const reviews = [
   {
-    img: "https://framerusercontent.com/images/Wt9C69zC4PM1lWqTEosfVNj6do8.png?scale-down-to=1024",
+    img: "/1.png",
   },
   {
-    img: "https://framerusercontent.com/images/b97XMhB8TUN8Xs4kt4d7tuinqw.png?scale-down-to=1024",
+    img: "/2.png",
   },
   {
-    img: "https://framerusercontent.com/images/uJsl9iIiM5WlSqK2Efj2lPfvSvg.png?scale-down-to=1024",
+    img: "/3.png",
   },
   {
-    img: "https://framerusercontent.com/images/PvLzm4rTHhoYifPPFlGFVSOo.png?scale-down-to=1024",
+    img: "/4.png",
   },
   {
-    img: "https://framerusercontent.com/images/ltWXYcIKMr48JlioIC2HGF9f8.png?scale-down-to=1024",
+    img: "/5.png",
   },
   {
-    img: "https://framerusercontent.com/images/VYwFny1dOY4auaqcz0u21q0VqBA.png?scale-down-to=1024",
+    img: "/6.png",
   },
 ];
 
