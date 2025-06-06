@@ -1,5 +1,24 @@
 import "./App.css";
 
+type Review = { img: string };
+
+function splitIntoRandomRows(reviews: Review[], rows: number = 6): Review[][] {
+  if (reviews.length < rows * 6) {
+    throw new Error("Not enough images to fill all rows with 6 unique images.");
+  }
+
+  // Shuffle the array
+  const shuffled = [...reviews].sort(() => Math.random() - 0.5);
+
+  // Split into chunks of 6
+  const result: Review[][] = [];
+  for (let i = 0; i < rows; i++) {
+    result.push(shuffled.slice(i * 6, (i + 1) * 6));
+  }
+
+  return result;
+}
+
 function App() {
   return (
     <div
@@ -19,7 +38,7 @@ export default App;
 import { cn } from "@/lib/utils";
 import { Marquee } from "@/components/magicui/marquee";
 
-const reviews = [
+const reviews: { img: string }[] = [
   {
     img: "/23.webp",
   },
@@ -130,12 +149,9 @@ const reviews = [
   },
 ];
 
-const firstRow = reviews.slice(0, 6);
-const secondRow = reviews.slice(6, 12);
-const thirdRow = reviews.slice(12, 18);
-const fourthRow = reviews.slice(18, 24);
-const fifthRow = reviews.slice(24, 30);
-const sixthRow = reviews.slice(30, 36);
+const rows = splitIntoRandomRows(reviews);
+
+const [firstRow, secondRow, thirdRow, fourthRow, fifthRow, sixthRow] = rows;
 
 const ReviewCard = ({ img }: { img: string }) => {
   return (
