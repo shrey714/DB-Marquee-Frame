@@ -6,7 +6,7 @@ function App() {
       className="h-svh w-svw"
       style={{
         background:
-          "linear-gradient(155deg, #000000 0%, rgb(11, 0, 74) 38.500080333246004%, rgb(0, 73, 184) 74.85924410434251%, rgb(48, 131, 236) 100%)",
+          "linear-gradient(160deg, #020617 0%, #081C4F 35%, #0B3B7B 70%, #2A7FD0 100%)",
       }}
     >
       <MarqueeDemoVertical />
@@ -21,37 +21,131 @@ import { Marquee } from "@/components/magicui/marquee";
 
 const reviews = [
   {
+    img: "/23.webp",
+  },
+  {
+    img: "/9.webp",
+  },
+  {
+    img: "/15.webp",
+  },
+  {
     img: "/1.png",
+  },
+  {
+    img: "/29.webp",
+  },
+  {
+    img: "/34.webp",
+  },
+  {
+    img: "/7.webp",
+  },
+  {
+    img: "/8.webp",
   },
   {
     img: "/2.png",
   },
   {
+    img: "/10.webp",
+  },
+  {
+    img: "/11.webp",
+  },
+  {
+    img: "/12.webp",
+  },
+  {
+    img: "/13.webp",
+  },
+  {
+    img: "/14.webp",
+  },
+  {
     img: "/3.png",
+  },
+  {
+    img: "/16.webp",
+  },
+  {
+    img: "/17.webp",
+  },
+  {
+    img: "/18.webp",
+  },
+  {
+    img: "/19.webp",
+  },
+  {
+    img: "/20.webp",
+  },
+  {
+    img: "/21.webp",
+  },
+  {
+    img: "/22.webp",
   },
   {
     img: "/4.png",
   },
   {
+    img: "/24.webp",
+  },
+  {
+    img: "/25.webp",
+  },
+  {
+    img: "/26.webp",
+  },
+  {
+    img: "/27.webp",
+  },
+  {
+    img: "/28.webp",
+  },
+  {
     img: "/5.png",
+  },
+  {
+    img: "/30.webp",
+  },
+  {
+    img: "/31.webp",
+  },
+  {
+    img: "/32.webp",
+  },
+  {
+    img: "/33.webp",
   },
   {
     img: "/6.png",
   },
+  {
+    img: "/35.webp",
+  },
+  {
+    img: "/36.webp",
+  },
 ];
 
-const firstRow = reviews.slice(0, reviews.length / 2);
-const secondRow = reviews.slice(reviews.length / 2);
+const firstRow = reviews.slice(0, 6);
+const secondRow = reviews.slice(6, 12);
+const thirdRow = reviews.slice(12, 18);
+const fourthRow = reviews.slice(18, 24);
+const fifthRow = reviews.slice(24, 30);
+const sixthRow = reviews.slice(30, 36);
 
 const ReviewCard = ({ img }: { img: string }) => {
   return (
     <figure
       className={cn(
-        "relative h-full w-full cursor-default overflow-hidden rounded-xl border-0 opacity-70 hover:opacity-90 duration-300"
+        "relative h-full w-full cursor-default overflow-hidden border-0 opacity-70 hover:opacity-90 duration-300"
       )}
     >
       <img
-        className="rounded-none h-full w-full"
+        className="rounded-xl h-full w-full"
         width="32"
         height="32"
         alt=""
@@ -81,7 +175,7 @@ function MarqueeDemoVertical() {
         vertical
         className="hidden sm:flex [--duration:110s] [--gap:8px] p-1 h-full flex-1"
       >
-        {firstRow.map((review, index) => (
+        {thirdRow.map((review, index) => (
           <ReviewCard key={index} {...review} />
         ))}
       </Marquee>
@@ -89,7 +183,7 @@ function MarqueeDemoVertical() {
         vertical
         className="hidden sm:flex [--duration:95s] [--gap:8px] p-1 flex-1"
       >
-        {secondRow.map((review, index) => (
+        {fourthRow.map((review, index) => (
           <ReviewCard key={index} {...review} />
         ))}
       </Marquee>
@@ -97,7 +191,7 @@ function MarqueeDemoVertical() {
         vertical
         className="hidden md:flex [--duration:70s] [--gap:8px] p-1 h-full flex-1"
       >
-        {firstRow.map((review, index) => (
+        {fifthRow.map((review, index) => (
           <ReviewCard key={index} {...review} />
         ))}
       </Marquee>
@@ -105,7 +199,7 @@ function MarqueeDemoVertical() {
         vertical
         className="hidden md:flex [--duration:120s] [--gap:8px] p-1 flex-1"
       >
-        {secondRow.map((review, index) => (
+        {sixthRow.map((review, index) => (
           <ReviewCard key={index} {...review} />
         ))}
       </Marquee>
