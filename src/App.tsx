@@ -58,7 +58,7 @@ const reviews: { img: string }[] = [
     img: "/34.webp",
   },
   {
-    img: "/7.webp",
+    img: "/7.png",
   },
   {
     img: "/8.webp",
@@ -213,7 +213,7 @@ function MarqueeDemoVertical() {
       </Marquee>
       <Marquee
         vertical
-        className="hidden md:flex [--duration:120s] [--gap:8px] p-1 flex-1"
+        className="hidden md:flex [--duration:100s] [--gap:8px] p-1 flex-1"
       >
         {sixthRow.map((review, index) => (
           <ReviewCard key={index} {...review} />
