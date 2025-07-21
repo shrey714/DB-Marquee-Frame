@@ -138,10 +138,9 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply text-foreground;
   }
 }
-
 
 .fade-in {
   opacity: 1;
