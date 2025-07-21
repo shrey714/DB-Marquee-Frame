@@ -30,7 +30,7 @@ function App() {
       }}
     >
       <MarqueeDemoVertical />
-      <p className="sr-only">random text</p>
+      <p className="text-[1px] leading-0">random text</p>
     </div>
   );
 }
