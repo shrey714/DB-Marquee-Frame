@@ -13,9 +13,7 @@ function App() {
           "linear-gradient(160deg, #020617 0%, #081C4F 35%, #0B3B7B 70%, #2A7FD0 100%)",
       }}
     >
-      <Suspense
-        fallback={<div className="text-white text-center p-4">Loading...</div>}
-      >
+      <Suspense fallback={<div></div>}>
         <LazyMarqueeDemo />
       </Suspense>
       <p className="leading-0 text-[1px]">random text</p>
