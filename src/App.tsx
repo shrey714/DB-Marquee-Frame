@@ -1,6 +1,7 @@
 import "./App.css";
 import { lazy, Suspense } from "react";
 
+// Lazy load the MarqueeDemoVertical component
 const LazyMarqueeDemo = lazy(() => import("./components/MarqueeDemoVertical"));
 
 function App() {
@@ -12,9 +13,10 @@ function App() {
           "linear-gradient(160deg, #020617 0%, #081C4F 35%, #0B3B7B 70%, #2A7FD0 100%)",
       }}
     >
-      <Suspense fallback={<></>}>
+      <Suspense fallback={<p className="text-[1px]">loading..</p>}>
         <LazyMarqueeDemo />
       </Suspense>
+      <p className="leading-0 text-[0px]">marquee</p>
     </div>
   );
 }
